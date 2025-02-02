@@ -14,6 +14,7 @@
     "@elysiajs/node": "^1.2.3",
     "@elysiajs/static": "^1.2.0",
     "elysia": "^1.2.10",
+    "eslint": "^9.19.0",
     "pixi.js": "^7.4.2"
   },
   "devDependencies": {
