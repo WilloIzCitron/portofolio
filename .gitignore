@@ -1,1 +1,3 @@
 node_modules
+public/dolls/*.png
+public/dolls/*.jpg
