@@ -14,9 +14,11 @@
     "@elysiajs/html": "^1.2.0",
     "@elysiajs/node": "^1.2.3",
     "@elysiajs/static": "^1.2.0",
+    "@elysiajs/swagger": "^1.2.0",
     "elysia": "^1.2.10",
     "elysia-rate-limit": "^4.1.0",
     "eslint": "^9.19.0",
+    "node-fetch": "^3.3.2",
     "pixi.js": "^7.4.2"
   },
   "devDependencies": {
