@@ -146,7 +146,6 @@ document.body.innerHTML = '<h2 style="color: white">Failed to load particles. Ch
 }           }
             </script>
             <style>
-                {
                 html, body {
                     margin: 0;
                 padding: 0;
@@ -164,7 +163,6 @@ document.body.innerHTML = '<h2 style="color: white">Failed to load particles. Ch
                 canvas {
                     height: 100%;
 }
-                }
             </style>
         </body>
     </html>`
