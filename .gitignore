@@ -1,4 +1,4 @@
 node_modules
 .env
-/public/portofolio.json
 /dist
+public/portofolio.json
