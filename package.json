@@ -16,13 +16,15 @@
     "@elysiajs/node": "^1.2.3",
     "@elysiajs/static": "^1.2.0",
     "@elysiajs/swagger": "^1.2.0",
-    "@vercel/edge-config": "^1.4.0",
+    "@netlify/functions": "^3.0.0",
+    "@types/express": "^5.0.0",
     "bun": "^1.2.2",
     "elysia": "^1.2.10",
     "elysia-rate-limit": "^4.1.0",
     "eslint": "^9.19.0",
     "node-fetch": "^3.3.2",
-    "pixi.js": "^7.4.2"
+    "pixi.js": "^7.4.2",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@types/node": "^22.12.0",

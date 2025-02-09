@@ -5,6 +5,7 @@ import { swagger } from '@elysiajs/swagger'
 import appCkat from './sites/ckat'
 import 'node-fetch'
 import bijinDollAPI from './api/bijindoll'
+import { Context } from '@netlify/functions'
 const fs = require('fs');
 
 const githubAPI = "https://api.github.com/users/WilloIzCitron"
@@ -13,7 +14,8 @@ var skill = ["Node.JS", "Java", "Python", "TypeScript", "Arduino"] // why do i w
 const githubRepo = ["ArchiveDustry-Java", "siuuu", "Spin"];
 var gitRepoData: { name: string; description: string; stars: number; forks: number; repoLink: string }[] = []
 
-const app = new Elysia({ adapter: node() })
+export default async (req: Request, con: Context) => {
+    const app = new Elysia({ adapter: node() })
     app.use(html())
     app.use(swagger({
         scalarConfig: {
@@ -83,3 +85,5 @@ const app = new Elysia({ adapter: node() })
             console.log("Error: " + error.message);
         }
         }
+    console.log("Done!")
+};
