@@ -1,6 +1,4 @@
 node_modules
 .env
-public/dolls/*.png
-public/dolls/*.jpg
 /public/portofolio.json
 /dist
