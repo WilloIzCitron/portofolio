@@ -19,5 +19,6 @@
             "src": "/public/(.*)",
             "dest": "/public"
         }
-    ]
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
