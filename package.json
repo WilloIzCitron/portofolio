@@ -5,7 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "dev": "tsx watch src/index.tsx",
-    "build": "tsc src/index.tsx --outDir dist",
+    "build": "tsc src/index.tsx --outDir dist --jsx",
     "start": "NODE_ENV=production node dist/index.jsx"
   },
   "private": true,
