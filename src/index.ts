@@ -15,10 +15,18 @@ var gitRepoData: { name: string; description: string; stars: number; forks: numb
 
 const app = new Elysia({ adapter: node() })
     app.use(html())
+    app.use(swagger({
+        scalarConfig: {
+            customCss: `
+            * { font-family: "Audiowide"; font-weight: normal; --scalar-font-bold: 500; --scalar-bold: 500;}
+            `,
+        }
+    }))
     appCkat(app)
     app.get('/', () => {return file('public/portofolio.json')})
+    bijinDollAPI(app)
         app.listen(process.env.PORT || 3000, ({ hostname, port }) => {
-            console.log(`🌸🌸 Elysia Web Server is running on http://${(hostname=="::") ? "localhost" : hostname}:${port}`)
+            console.log(`🌸🌸 Elysia Unified Server is running on http://${(hostname=="::") ? "localhost" : hostname}:${port}`)
             fetchGitHubData();
         })
         
@@ -66,7 +74,8 @@ const app = new Elysia({ adapter: node() })
             company: json.company,
             followers: json.followers,
             following: json.following,
-            projects: gitRepoData
+            projects: gitRepoData,
+            api: "go to /swagger to see the API documentation"
             };
 
             fs.writeFileSync('public/portofolio.json', JSON.stringify(result, null, 2));
@@ -74,21 +83,3 @@ const app = new Elysia({ adapter: node() })
             console.log("Error: " + error.message);
         }
         }
-
-const api = new Elysia({ adapter: node() })
-    api.use(swagger({
-        scalarConfig: {
-            customCss: `
-            * { font-family: "Audiowide"; font-weight: normal; --scalar-font-bold: 500; --scalar-bold: 500;}
-            `,
-        }
-    }))
-    api.get('/', () => {
-        return {
-            message: "To see the endpoints, go to /swagger"
-        }
-    })
-    bijinDollAPI(api)
-    api.listen((process.env.PORT != undefined) ? process.env.PORT + 1 : undefined || 3001, ({ hostname, port }) => {
-        console.log(`🌸🌸 Elysia API Server is running on http://${(hostname=="::") ? "localhost" : hostname}:${port}`)
-    })
