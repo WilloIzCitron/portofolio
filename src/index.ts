@@ -17,7 +17,7 @@ const app = new Elysia({ adapter: node() })
     app.use(html())
     appCkat(app)
     app.get('/', () => {return file('public/portofolio.json')})
-        app.listen(3000, ({ hostname, port }) => {
+        app.listen(process.env.PORT || 3000, ({ hostname, port }) => {
             console.log(`🌸🌸 Elysia Web Server is running on http://${(hostname=="::") ? "localhost" : hostname}:${port}`)
             fetchGitHubData();
         })
@@ -89,6 +89,6 @@ const api = new Elysia({ adapter: node() })
         }
     })
     bijinDollAPI(api)
-    api.listen(3001, ({ hostname, port }) => {
+    api.listen((process.env.PORT != undefined) ? process.env.PORT + 1 : undefined || 3001, ({ hostname, port }) => {
         console.log(`🌸🌸 Elysia API Server is running on http://${(hostname=="::") ? "localhost" : hostname}:${port}`)
     })
