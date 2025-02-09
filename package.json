@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.tsx",
   "scripts": {
-    "dev": "tsx watch src/index.tsx",
-    "build": "tsc src/index.tsx --outDir dist --jsx",
-    "start": "NODE_ENV=production node dist/index.jsx"
+    "dev": "bun dev",
+    "build": "bun build ./src/index.ts --outfile ./dist/index.js --target bun",
+    "start": "NODE_ENV=production bun dist/index.js"
   },
   "private": true,
   "dependencies": {
@@ -15,6 +15,7 @@
     "@elysiajs/node": "^1.2.3",
     "@elysiajs/static": "^1.2.0",
     "@elysiajs/swagger": "^1.2.0",
+    "bun": "^1.2.2",
     "elysia": "^1.2.10",
     "elysia-rate-limit": "^4.1.0",
     "eslint": "^9.19.0",

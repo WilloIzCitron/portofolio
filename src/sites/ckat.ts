@@ -5,7 +5,7 @@ import { html, Html } from '@elysiajs/html'
 function appCkat(app: Elysia) {
 app.use(html())
 .get('/wallpaper1', () => (
-    <html lang="en">
+    `<html lang="en">
         <head>
             <title>Animdustry Wallpaper Renderer: CKAT</title>
         </head>
@@ -13,7 +13,7 @@ app.use(html())
             <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/pixi-filters@5.x/dist/browser/pixi-filters.min.js"></script>
             <script>
-                {`
+                {
 window.onload = function() {
 (async () => {
 // Create Pixi application
@@ -143,10 +143,10 @@ console.error('Error loading resources:', error);
 document.body.innerHTML = '<h2 style="color: white">Failed to load particles. Check console for details.</h2>';
 }
 })();
-}           `}
+}           }
             </script>
             <style>
-                {`
+                {
                 html, body {
                     margin: 0;
                 padding: 0;
@@ -164,10 +164,10 @@ document.body.innerHTML = '<h2 style="color: white">Failed to load particles. Ch
                 canvas {
                     height: 100%;
 }
-                `}
+                }
             </style>
         </body>
-    </html>
+    </html>`
 ))
 }
 
