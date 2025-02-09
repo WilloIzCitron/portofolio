@@ -1,10 +1,13 @@
 {
     "version": 2,
+    "scripts": {
+        "intall": "yarn install",
+        "build": "yarn build"
+    },
     "builds": [
         {
             "src": "/dist/index.ts",
             "use": "@vercel/node"
         }
-    ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    ]
 }
