@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.tsx",
   "scripts": {
-    "dev": "bun dev",
+    "dev": "tsx watch ./src/index.ts",
     "build": "bun build ./src/index.ts --outfile ./dist/index.js --target node",
     "start": "NODE_ENV=production node dist/index.js"
   },
