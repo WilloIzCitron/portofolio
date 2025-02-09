@@ -1,13 +1,12 @@
 {
     "version": 2,
-    "scripts": {
-        "intall": "yarn install",
-        "build": "yarn build"
-    },
+        "intallCommand": "yarn install",
+        "buildCommand": "yarn build",
     "builds": [
         {
             "src": "/dist/index.ts",
             "use": "@vercel/node"
         }
-    ]
+    ],
+    "outputDirectory": "."
 }
