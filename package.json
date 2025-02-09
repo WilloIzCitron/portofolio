@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.tsx",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch ./src/index.ts",
     "build": "bun build ./src/index.ts --outfile ./api/index.js --target node",
