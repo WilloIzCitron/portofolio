@@ -6,7 +6,7 @@ import { rateLimit } from 'elysia-rate-limit'
 import { fileURLToPath } from 'url'
 
 var imageIndex = 0;
-const imageDirectory = path.join(import.meta.dirname, '..\\..\\public\\dolls')
+const imageDirectory = path.join(import.meta.dirname, '../../public/dolls')
 const imageCount = fs.readdirSync(imageDirectory).filter(file => file.startsWith('doll')).length
 
 function bijinDollAPI(app: Elysia) {
