@@ -1,6 +1,39 @@
 {
-    "test": "testasdfghjkl",
-    "lorem": "Lorem Ipsum dolor sit amet",
-    "name": "Izayoi Nonomi",
-    "ForeclosureTaskForce": ["Shiroko", "Hoshino", "Serika", "Ayane", "Nonomi"]
+  "name": "Tegas Aziz (WilloIzCitron)",
+  "bio": "Just an ordinary indie dev.\r\ni made random things\r\n",
+  "skills": [
+    "Node.JS",
+    "Java",
+    "Python",
+    "TypeScript",
+    "Arduino"
+  ],
+  "location": "Bekasi, Indonesia",
+  "company": "@MindustryID",
+  "followers": 14,
+  "following": 16,
+  "projects": [
+    {
+      "name": "ArchiveDustry-Java",
+      "description": "Blue Archive Soundtracks and Cosmetics in Mindustry",
+      "stars": 63,
+      "forks": 3,
+      "repoLink": "https://github.com/WilloIzCitron/ArchiveDustry-Java"
+    },
+    {
+      "name": "siuuu",
+      "description": "it was just the siuuu, ronaldo said it",
+      "stars": 7,
+      "forks": 0,
+      "repoLink": "https://github.com/WilloIzCitron/siuuu"
+    },
+    {
+      "name": "Spin",
+      "description": "Spinning Cube with p5.js for Lively",
+      "stars": 0,
+      "forks": 0,
+      "repoLink": "https://github.com/WilloIzCitron/Spin"
+    }
+  ],
+  "api": "go to /swagger to see the API documentation"
 }

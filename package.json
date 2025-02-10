@@ -6,10 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch ./src/index.ts",
+    "ts.check": "tsc --project tsconfig.json",
     "build": "bun build ./src/index.ts --outfile ./api/index.js --target node",
+    "buildExecutable": "bun build ./src/index.ts --compile --outfile index --target bun --minify-whitespace --minify-syntax",
     "start": "NODE_ENV=production node api/index.js"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@elysiajs/eden": "^1.2.0",
     "@elysiajs/html": "^1.2.0",

@@ -3,3 +3,4 @@ node_modules
 /dist
 public/portofolio.json
 .vercel
+/api
