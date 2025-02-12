@@ -8,10 +8,11 @@ import bijinDollAPI from './api/bijindoll'
 import { Context } from '@netlify/functions'
 import fs from 'fs'
 
+
 const githubAPI = "https://api.github.com/users/WilloIzCitron"
 const githubRepoApi = "https://api.github.com/repos/WilloIzCitron/"
 var skill = ["Node.JS", "Java", "Python", "TypeScript", "Arduino"] // why do i write it manually? idk man.
-const githubRepo = ["ArchiveDustry-Java", "siuuu", "Spin"];
+const githubRepo = ["ArchiveDustry-Java", "siuuu", "Spin", "yuukasport"];
 var gitRepoData: { name: string; description: string; stars: number; forks: number; repoLink: string }[] = []
 
     const app = new Elysia({ adapter: node() })
@@ -19,6 +20,7 @@ var gitRepoData: { name: string; description: string; stars: number; forks: numb
     app.use(swagger({
         scalarConfig: {
             customCss: `
+	    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
             * { font-family: "Audiowide"; font-weight: normal; --scalar-font-bold: 500; --scalar-bold: 500;}
             `,
         }
